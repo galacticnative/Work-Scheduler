@@ -21,7 +21,7 @@ $(document).ready(function () {
     
 });
 
-$("#9am").val(localStorage.getItem("9AM"));
+$("#9am").val(localStorage.getItem("9AM"))
 $("#10am").val(localStorage.getItem("10AM"));
 $("#11am").val(localStorage.getItem("11AM"));
 $("#12pm").val(localStorage.getItem("12PM"));

@@ -69,9 +69,3 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
-
-h4 {
-    line-height: 0;
-    font-size: 1.1rem;
-    text-align: right;
-}
