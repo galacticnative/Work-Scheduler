@@ -9,3 +9,4 @@ HTML, CSS, JavaScript with the implementation of third-party APIs (Bootstrap, Mo
 ## Link to webpage:
 https://galacticnative.github.io/work-scheduler/
 
+![](./assets/images/work-scheduler.gif)
