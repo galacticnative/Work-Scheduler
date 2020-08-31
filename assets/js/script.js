@@ -5,23 +5,27 @@ var displayTime = document.getElementById("currentDay");
 displayTime.innerHTML = now;
 
 
-
 //save button clicked function
 $(document).ready(function () {
     $(".saveBtn").click(function() {
 
-        var inputText = $(this).siblings("input").val().trim();
-        var hour = $(this).siblings("section").text()
+        var inputText = $(this).siblings("input").val().trim()
+        var hourHead = $(this).siblings("section").text()
 
-        localStorage.setItem(hour, inputText);
+        //localStorage.setItem(hour, inputText);
     
         //console.log("save clicked")
-    
+        loadTasks(inputText, hourHead);
     })
     
 });
 
-$("#9am").val(localStorage.getItem("9AM"))
+//function to load tasks to local storage
+var loadTasks = function (inputText, hourHead) {
+    localStorage.setItem(hourHead, inputText);
+}
+
+$("#9am").val(localStorage.getItem("9AM"));
 $("#10am").val(localStorage.getItem("10AM"));
 $("#11am").val(localStorage.getItem("11AM"));
 $("#12pm").val(localStorage.getItem("12PM"));
@@ -30,7 +34,6 @@ $("#14pm").val(localStorage.getItem("2PM"));
 $("#15pm").val(localStorage.getItem("3PM"));
 $("#16pm").val(localStorage.getItem("4PM"));
 $("#17pm").val(localStorage.getItem("5PM"));
-
 
 
 var hour = moment().hour();
