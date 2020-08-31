@@ -1,4 +1,4 @@
-var now = moment().format("MMMM Do, YYYY");
+var now = moment().format("MMMM Do, YYYY, h:mm a");
 
 //displays the current date in the Header
 var displayTime = document.getElementById("currentDay");
@@ -6,19 +6,20 @@ displayTime.innerHTML = now;
 
 
 //save button clicked function
-$(document).ready(function () {
+//$(document).ready(function () {
     $(".saveBtn").click(function() {
 
         var inputText = $(this).siblings("input").val().trim()
         var hourHead = $(this).siblings("section").text()
 
-        //localStorage.setItem(hour, inputText);
+        //localStorage.setItem(hourHead, inputText);
+
     
         //console.log("save clicked")
         loadTasks(inputText, hourHead);
     })
-    
-});
+
+//});
 
 //function to load tasks to local storage
 var loadTasks = function (inputText, hourHead) {
